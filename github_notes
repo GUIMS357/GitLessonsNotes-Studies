@@ -1,0 +1,171 @@
+git status(inside Dir) =  verify if the git is controlling this directory.
+
+git init ( dir) = initialize git control in this directory.
+
+create txt file gitignore = (writte the name of the (file or **directory or *.extension) inside the txt and git will no longer track it)
+obs: git doesn´t track empty directories.
+
+.git directory:
+config:
+if you create a new repo.
+
+local: if your computer is public or used by 2 or more people.
+git config user.name "GUIMS357"
+git config user.email "guims357@gmail.com"
+
+global:  personal computer, you are the only user.
+git config --global user.name "GUIMS357"
+git config --global user.email "guims357@gmail.com"
+
+Basic operations:
+git add (file) = git star tracking the archive & if you modify the file usa add again to update afoter commit
+git add . = add everything that was created or modified
+
+git commit = it's like to take a picture of the project in this time space(situation)
+add -m "to writte a messsage".
+
+Hash ID = is the number of a snapshot, a "picture" of the project in a certain time
+
+git log:
+
+git log = show every commit maded and the respectives messages
+if you see : you can replace for a / and add  a word to search in the messages you added with -m
+if you see : you can replace for a "q" to quit
+head -> master is were we are now
+git config core.pager cat = now git log will show every commit maded --global to change to all repos
+git config core.page less = return to the previous mode
+
+
+git flags:
+
+git log -2 = last 2 comits ( chage the number to se more or less  comits)
+
+git log --oneline ( all the info in  single line)
+
+git log --before = "2020-05-25" = before or after and "AAAA-MM-DD" & since="x days/months/year ago"
+
+git log --author = <name>
+
+git help log
+
+return to a previous comit:
+
+git checkout Hash ID = return to a previous commit and undo all the changes
+
+git chackout master = return to the head ( last commit)
+
+more comands:
+
+git mv <nactual name> <new name>
+
+if youn chage a name of a file via S.O., you need to add a new status to them,. you need to git add <oldfilename>
+
+git rm <name> = exclude a file
+
+git diff --staged = compare this staged( green status, before add) file with the last commited file
+use to check before commit
+
+git diff <hash-id> diferrence between the file now and the commit with the especified hash
+git diff <hash-id older>..<hash-id newer>
+
+git commit --amend -m "new message" = change the message in the last commit or add new things to it
+
+
+git restore --staged <file name> = remove from monitoring ( undo add command)
+
+git checkout <file name> = return the file to the previous commit
+
+git reset HEAD --hard = return all the files to the files in the previous commit
+
+git reset HEAD^ --hard = return to the last HEAD and discard the last commit
+
+branch and derivatives
+
+is a branch in the main code that can be developed in other ways to obtain different resultor or, can be used to test some implementations keeping the main code safe
+
+                 ---------------> branch
+-----------/----/----------------------> project  ( each - is a comit) and this is the branch master
+            --------------> branch ( to add a function or modify something than can broke the project)
+
+            the comiit with  " / " is the base of the new branch
+
+branch:
+
+git branch <name> = to create a new branch with the specified name
+
+git branch = show every branch of the project ( * represents the branch currently used)
+
+git checkout < branchname> = chenge to the selected branch
+
+git branch -D <name> = delete branch
+
+git branch -d <name> = delete only merged branchs
+
+git merge < branch name> = i will merge into your actual branch the selected branch( name you specified)
+
+git checkout -b <name> = create and acess the new branch it's like a branch+checkout
+
+
+rebase:
+
+it's like a merge
+
+merge insert the branch were you are now
+
+rebase insert in the BASE were you open the branch
+
+git rebase <name>
+
+clone & push:
+
+git clone <adress of the original repo> <were the new repo will be ( use '.' if you want were the terminal was opened)> = clone repository that exists, after clone you have the original repository as a local repository and
+you can att both using the other
+
+git push = send the modifications(commits) to the original repo/root repo/ central repo
+git push origin = send to the bare repo
+
+
+fetch & pull:
+
+fetch = download att from a remote repo but doesn't apply to our local repo (don't do a merge so, you can do a rebase instead)
+you need to use rebase to add the files
+
+pull = download att from a remote repo and apply to the repo (fetch+rebase)
+ctrl+o to writte
+ctrl+x to exit
+
+bare repository:
+root repository, were everyone puts his commits
+
+git init --bare = create a bare repository
+this will be the root/central/original repo, it's where the project started
+
+
+tags:
+it's like branches but you can´t commit anymore
+you can create a branch of a tag
+it's used to create stable versions of products even if it is incomplete
+but can be deployed in production
+
+you can create a release 1.0, 1.1, 1.2 ...
+
+git tag = show tags
+
+git tag <tag name> = create tag
+
+
+git remote -v
+
+git config credential.helper store
+to save login and password
+
+
+to send to a remote directory
+
+git push -u <origin>( were you get it form) <branch name>
+
+
+
+
+
+
