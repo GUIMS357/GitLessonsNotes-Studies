@@ -164,9 +164,41 @@ to send to a remote directory
 
 git push -u <origin>( were you get it form) <branch name>
 
-adding new collaborators
+adding new collaborators:
+
+at the github project page, go to settings, manage access and search the collaborator
+
+the collaborator needs to accept the invitation
 
 
+commit historic at github:
+
+at github, open repo, click in commits and ou can see every commit, colaborator, data, hour, ID and what the person did.
+
+
+
+checkouts again:
+
+git checkout -- . = all the files return to their original status
+
+git checkout -- <filename> = returnthe file to original status ( before M status)
+
+it the archive is at pre commit status use
+
+git checkout HEAD -- .
+
+git checkout HEAD -- <filename>
+
+
+
+revert and reset:
+
+git revert <commit ID(usualy the one with the wrong section)> if you do a commit and did something wrong (added a code section),you can fix( erase the code section),and it will create a new  commit without tht section but it will not erase any commit
+
+it will mantain the commit with the wrong section
+it's used to mantain a track of the commits
+
+git reset HEAD~<number of commits you wanto to erase> remove the commit
 
 
 
