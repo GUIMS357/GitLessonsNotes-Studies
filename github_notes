@@ -226,7 +226,7 @@ you are creating a new personal repo based on an existing repo.
 
 pull request: when you fork a project and modify them, you can do a pull request and if the original owner accept to include your code to the original project
 
-ideally you create a branch and test  using  = git fetch origin pull/<pull request ID>/head: <what are you doing, what is it for(brench name)>
+ideally you create a branch and test  using  = git fetch origin pull/<pull request ID>/head: <branch name (what are you doing, what is it for)>
 git checkout
 
 
