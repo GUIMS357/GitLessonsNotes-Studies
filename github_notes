@@ -200,7 +200,9 @@ it's used to mantain a track of the commits
 
 git reset HEAD~<number of commits you wanto to erase> remove the commit
 
-conflicts:
+
+
+conflicts, occour when two people modify THE SAME file:
 
 in merges or rebases = when you try to push your repository to the github and it is older than the repo on git( someone had changed and maded a push before you)
 
@@ -210,5 +212,21 @@ he will thell you that you have a conflict ( content and specify the file)
 
 the git will show the conflict and itś your responsability to solve the conflicts manually and remove the comments.
 
+
+Issues: it's like todo things,
+planning what you will do next,bugs, things that you did wrokg and are not working
+
+you can close in commit using Closes #<number of the issue>
+
+
+Fork: you create a new repo with the code of other person in your personal github page and the repo will be full independent, it's like I have created a project from begginig
+
+you are creating a new personal repo based on an existing repo.
+
+
+pull request: when you fork a project and modify them, you can do a pull request and if the original owner accept to include your code to the original project
+
+ideally you create a branch and test  using  = git fetch origin pull/<pull request ID>/head: <what are you doing, what is it for(brench name)>
+git checkout
 
 
