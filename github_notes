@@ -200,6 +200,15 @@ it's used to mantain a track of the commits
 
 git reset HEAD~<number of commits you wanto to erase> remove the commit
 
+conflicts:
+
+in merges or rebases = when you try to push your repository to the github and it is older than the repo on git( someone had changed and maded a push before you)
+
+you need to download the newer version
+
+he will thell you that you have a conflict ( content and specify the file)
+
+the git will show the conflict and itś your responsability to solve the conflicts manually and remove the comments.
 
 
 
